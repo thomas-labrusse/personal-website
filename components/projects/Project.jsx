@@ -11,8 +11,8 @@ const Project = (props) => {
 
 	return (
 		<div className={classes.project}>
-			<h1>{name}</h1>
-			<p className={classes.description}>{shortDescription}</p>
+			<h1 className={classes.name}>{name}</h1>
+			<p className={classes['main-description']}>{shortDescription}</p>
 			<img className={classes.image} src={image}></img>
 			<p className={classes.description}>{description}</p>
 			<div className={classes.tags}>
