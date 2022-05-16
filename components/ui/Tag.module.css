@@ -1,0 +1,16 @@
+.tag {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #e6e6e6;
+	border-radius: 5px;
+	width: fit-content;
+	padding: 7px 14px;
+}
+
+.tag span {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 700;
+	color: #282828;
+}

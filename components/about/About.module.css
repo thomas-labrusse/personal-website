@@ -16,3 +16,9 @@
 	/* font-style: italic; */
 	color: #282828;
 }
+
+.link a:hover,
+.link a:active,
+.link a:visited {
+	font-weight: 400;
+}

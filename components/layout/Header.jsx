@@ -18,7 +18,7 @@ const Header = () => {
 				</div>
 				<div className={classes.separation}></div>
 				<div className={`${classes.link} ${classes.right}`}>
-					<Link href='/'>Projects</Link>
+					<Link href='/projects'>Projects</Link>
 				</div>
 			</div>
 		</div>

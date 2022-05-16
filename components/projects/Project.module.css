@@ -1,0 +1,45 @@
+.project {
+	display: flex;
+	flex-direction: column;
+}
+
+.image {
+	width: 70%;
+	border-radius: 10px;
+}
+
+.description {
+	width: 90%;
+}
+
+.tags {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.link {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 26px;
+	margin-bottom: 16px;
+}
+
+.icon {
+	width: 24px;
+}
+
+.url {
+	color: #535353;
+	font-size: 16px;
+}
+
+.url a {
+	text-decoration: none;
+}
+
+.url a:visited {
+	color: #535353;
+}
