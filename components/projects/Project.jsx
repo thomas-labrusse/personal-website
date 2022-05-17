@@ -13,7 +13,9 @@ const Project = (props) => {
 		<div className={classes.project}>
 			<h1 className={classes.name}>{name}</h1>
 			<p className={classes['main-description']}>{shortDescription}</p>
-			<img className={classes.image} src={image}></img>
+			<div className={classes['image-container']}>
+				<img className={classes.image} src={image}></img>
+			</div>
 			<p className={classes.description}>{description}</p>
 			<div className={classes.tags}>
 				{stack.map((tag) => (

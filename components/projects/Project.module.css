@@ -7,9 +7,14 @@
 	margin: 0px;
 }
 
-.image {
-	width: 65%;
+.image-container {
+	border-radius: 10px;
 	margin-bottom: 20px;
+}
+
+.image {
+	height: 300px;
+	/* width: 70%; */
 	border-radius: 10px;
 }
 

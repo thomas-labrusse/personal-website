@@ -14,7 +14,26 @@ const About = () => {
 			<p>
 				<span>
 					I’ve been working in startups finance departments most of my adult
-					life, and have enjoyed being surounded by passionate builders.
+					life, and have enjoyed being surrounded by passionate builders from
+					very different fields (
+					<span className={classes.link}>
+						<a href='https://www.netatmo.com/fr-fr' target='_blank'>
+							iot
+						</a>
+					</span>
+					,{' '}
+					<span className={classes.link}>
+						<a href='https://www.dailymotion.com/' target='_blank'>
+							streaming
+						</a>
+					</span>
+					,{' '}
+					<span className={classes.link}>
+						<a href='https://www.habx.com' target='_blank'>
+							proptech
+						</a>
+					</span>
+					).
 				</span>
 			</p>
 			<p>
@@ -44,9 +63,9 @@ const About = () => {
 			</p>
 			<p>
 				<span>
-					I’m open to work on meaningfull projects. I’m mostly sector agnostic
+					I’m open to work on meaningful projects. I’m mostly sector agnostic
 					but will not work for any industry that doesn’t align with my idea of
-					an healthy physical, social, and intellectual life.
+					a healthy physical, social, and intellectual life.
 				</span>
 			</p>
 			<p>
