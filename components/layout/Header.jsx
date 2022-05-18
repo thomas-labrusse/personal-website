@@ -7,7 +7,7 @@ const Header = () => {
 		<div className={classes.header}>
 			<div className={classes['image-container']}>
 				<img
-					src='./images/photo-id-format.png'
+					src='../images/photo-id-format.png'
 					alt='id photo'
 					className={classes.photo}
 				/>

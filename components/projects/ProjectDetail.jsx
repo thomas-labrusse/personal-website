@@ -3,14 +3,15 @@ import React from 'react'
 import Tag from '../ui/Tag'
 import Separator from '../ui/Separator'
 
-import classes from './Project.module.css'
+import classes from './ProjectDetail.module.css'
 
 const Project = (props) => {
-	const { id, name, shortDescription, image, description, stack, github, url } =
+	const { name, shortDescription, image, description, stack, github, url } =
 		props
 
 	return (
 		<div className={classes.project}>
+			<Separator />
 			<h1 className={classes.name}>{name}</h1>
 			<p className={classes['main-description']}>{shortDescription}</p>
 			<div className={classes['image-container']}>

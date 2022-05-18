@@ -1,7 +1,9 @@
-.projects {
+.projects-cards {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
-	/* width: 705; */
+	column-gap: 80px;
+	row-gap: 60px;
 	max-width: 705px;
 }

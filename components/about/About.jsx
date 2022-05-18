@@ -18,7 +18,7 @@ const About = () => {
 					very different fields (
 					<span className={classes.link}>
 						<a href='https://www.netatmo.com/fr-fr' target='_blank'>
-							iot
+							IoT
 						</a>
 					</span>
 					,{' '}
@@ -30,7 +30,7 @@ const About = () => {
 					,{' '}
 					<span className={classes.link}>
 						<a href='https://www.habx.com' target='_blank'>
-							proptech
+							PropTech
 						</a>
 					</span>
 					).
@@ -38,17 +38,17 @@ const About = () => {
 			</p>
 			<p>
 				<span>
-					Since early 2021 I’ve decided to learn how to code. That’s what I’ve
-					mostly been doing since then. I'm very grateful that I could dedicate
-					all this time to the sole purpose of learning. Learning and share
-					knowledge in all aspects of life as always been, and will remain my
+					Since early 2021 I’ve been learning how to code. I'm very grateful to
+					have been able to use my time to do this. Learning and share
+					knowledge, in all aspects of life, as always been, and will remain my
 					main driver.
 				</span>
 			</p>
 			<p>
 				<span>
-					I’m currently working with the following technology : JS(ES6), React,
-					NextJS, NodeJS, Express, MongoDB, Web3 libraries (ethers, solana).
+					I’m currently working with the following technologies : JS(ES6),
+					React, NextJS, NodeJS, Express, MongoDB, Web3 libraries (ethers,
+					solana).
 				</span>
 			</p>
 			<p>
@@ -76,7 +76,7 @@ const About = () => {
 							href='https://www.linkedin.com/in/thomas-labrusse/'
 							target='_blank'
 						>
-							linkedin
+							LinkedIn
 						</a>
 					</span>{' '}
 					or any means you wish.
