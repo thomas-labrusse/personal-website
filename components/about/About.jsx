@@ -15,7 +15,7 @@ const About = () => {
 				<span>
 					I’ve been working in startups finance departments most of my adult
 					life, and have enjoyed being surrounded by passionate builders from
-					very different fields (
+					very different backgrounds and industries (
 					<span className={classes.link}>
 						<a href='https://www.netatmo.com/fr-fr' target='_blank'>
 							IoT

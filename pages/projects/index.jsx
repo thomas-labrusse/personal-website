@@ -6,21 +6,22 @@ export const PROJECTS = [
 		id: '1',
 		name: 'Races Medal NFTs',
 		shortDescription:
-			'Low carbon footprint NFTs that act as digital medals only races finishers can reedem.',
+			'Low carbon footprint NFTs that act as digital medals only races finishers can redeem.',
 		thumbnail: '../images/minter-thumbnail.png',
 		image: '../images/minter-300h.png',
 		description:
-			'Project longer description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempore est beatae expedita magni minima commodi autem hic! Assumenda commodi suscipit obcaecati! Molestias consequuntur consequatur earum modi neque dolor iure aspernatur laudantium eligendi distinctio hic quia aliquam exercitationem cumque dicta nisi, provident perspiciatis quisquam molestiae? Dolorum officiis accusamus ad corrupti!',
+			'Web3 application allowing races organizers to offer digital medals (NFTs) to finishers. The NFTs are stored on the Solana blockchain, a proof of history / proof of stake blockchain with very low carbon footprint impact. Finishers can mint their medal NFT directly by connecting their Phantom wallet to the App. A "medal cabinet" page allows medal owners to display all their medals linked to their connected wallet. App developed with React, using solana Metaplex NFT standard and Candy Machine v2 for the mint. Designed on Figma. A first working version was made on the Ethereum blockchain using a solidity smart contract library for NFTs. Moved to Solana to limit significantly the environmental impact of transactions',
 		stack: ['React', 'web3', 'solana-blockchain', 'scss', 'figma'],
 		github: 'https://github.com/thomas-labrusse',
-		url: 'https://google.com/',
+		// url: 'https://google.com/',
 	},
 	{
 		id: '2',
 		name: 'OpenSea Rarity Chrome Extension',
-		shortDescription: 'Project short description',
+		shortDescription:
+			'Calculate and display NFT collections rarity directly on page',
 		thumbnail: '../images/chrome-extension-thumbnail.png',
-		image: '../images/chrome-extension-1.gif',
+		image: '../images/chrome-extension.gif',
 		description:
 			'Project longer description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempore est beatae expedita magni minima commodi autem hic! Assumenda commodi suscipit obcaecati! Molestias consequuntur consequatur earum modi neque dolor iure aspernatur laudantium eligendi distinctio hic quia aliquam exercitationem cumque dicta nisi, provident perspiciatis quisquam molestiae? Dolorum officiis accusamus ad corrupti!',
 		stack: ['React', 'NodeJS', 'Express', 'MongoDB'],
@@ -32,9 +33,9 @@ export const PROJECTS = [
 		shortDescription:
 			'Small Slack Bot allowing coworking members to flag their presence',
 		thumbnail: '../images/slack-bot-thumbnail.png',
-		image: '../images/slack-bot-project-300h.png',
+		image: '../images/slack-bot.gif',
 		description:
-			'Project longer description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempore est beatae expedita magni minima commodi autem hic! Assumenda commodi suscipit obcaecati! Molestias consequuntur consequatur earum modi neque dolor iure aspernatur laudantium eligendi distinctio hic quia aliquam exercitationem cumque dicta nisi, provident perspiciatis quisquam molestiae? Dolorum officiis accusamus ad corrupti!',
+			'Designed for a coworking space who needed to track members presence every day. This small slack bot sends a message to a dedicated channel, on a daily basis, to collect users input. When users notify their presence, the message updates to show their name. Written in Javascript using Bolt (Slack SDK). Deployed on AWS Lambda. A CRON job is setup to send the message daily, using AWS/Serverless scheduling functionnality.',
 		stack: ['Javascript', 'Bolt', 'AWS Lambda', 'Serverless'],
 		github: 'https://github.com/thomas-labrusse/slack-bot-whos-coming',
 	},
