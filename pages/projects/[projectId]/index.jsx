@@ -4,9 +4,6 @@ import ProjectDetail from '../../../components/projects/ProjectDetail'
 import { PROJECTS } from '../../projects'
 
 const ProjectDetailPage = (props) => {
-	console.log(PROJECTS)
-	console.log('Props:', props)
-
 	return (
 		<div>
 			<ProjectDetail
@@ -44,11 +41,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-	console.log(PROJECTS)
 	const projectId = context.params.projectId
-	console.log('Project ID : ', projectId)
 	const data = PROJECTS.filter((project) => project.id === projectId)
-	console.log('Data:', data)
 
 	return {
 		props: {
