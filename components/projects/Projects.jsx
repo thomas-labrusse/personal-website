@@ -1,5 +1,4 @@
 import React from 'react'
-import Project from './ProjectDetail'
 
 import Separator from '../ui/Separator'
 
