@@ -16,6 +16,7 @@ const Projects = (props) => {
 						name={project.name}
 						shortDescription={project.shortDescription}
 						image={project.image}
+						thumbnail={project.thumbnail}
 						stack={project.stack}
 						github={project.github}
 						url={project.url}

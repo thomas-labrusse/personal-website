@@ -9,7 +9,8 @@ import classes from './ProjectCard.module.css'
 const ProjectCard = (props) => {
 	const router = useRouter()
 
-	const { id, name, shortDescription, image, stack, github, url } = props
+	const { id, name, shortDescription, image, thumbnail, stack, github, url } =
+		props
 
 	const showProjectDetailHandler = () => {
 		router.push('/projects/' + id)
@@ -18,7 +19,7 @@ const ProjectCard = (props) => {
 	return (
 		<div className={classes.card}>
 			<div className={classes['image-container']}>
-				<img src={image} />
+				<img src={thumbnail} />
 			</div>
 			<div className={classes['card-infos']}>
 				<div className={classes['text-description']}>
@@ -35,7 +36,7 @@ const ProjectCard = (props) => {
 						{github && (
 							<a href={github} target='_blank'>
 								<img
-									src='/images/github-icon-dark.svg'
+									src='/images/icons/github-icon-dark.svg'
 									alt='github icon'
 									className={classes.icon}
 								/>
@@ -44,7 +45,7 @@ const ProjectCard = (props) => {
 						{url && (
 							<a href={url} target='_blank'>
 								<img
-									src='/images/globe-icon.svg'
+									src='/images/icons/globe-icon.svg'
 									alt='world icon'
 									className={classes.icon}
 								/>
@@ -58,7 +59,7 @@ const ProjectCard = (props) => {
 						>
 							<span className={classes['button-text']}>see more</span>
 							<img
-								src='/images/arrow-right-icon.svg'
+								src='/images/icons/arrow-right-icon.svg'
 								className={classes['button-icon']}
 								alt=''
 							/>

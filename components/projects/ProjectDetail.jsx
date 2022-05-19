@@ -26,7 +26,7 @@ const Project = (props) => {
 			{github && (
 				<div className={classes.link}>
 					<img
-						src='/images/github-icon-dark.svg'
+						src='/images/icons/github-icon-dark.svg'
 						alt='github icon'
 						className={classes.icon}
 					/>
@@ -40,7 +40,7 @@ const Project = (props) => {
 			{url && (
 				<div className={classes.link}>
 					<img
-						src='/images/globe-icon.svg'
+						src='/images/icons/globe-icon.svg'
 						alt='world icon'
 						className={classes.icon}
 					/>

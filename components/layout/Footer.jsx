@@ -7,14 +7,14 @@ const Footer = () => {
 			<div className={classes['icons-container']}>
 				<a href='https://github.com/thomas-labrusse' target='_blank'>
 					<img
-						src='/images/github-icon.svg'
+						src='/images/icons/github-icon.svg'
 						alt='github icon'
 						className={classes.icon}
 					/>
 				</a>
 				<a href='https://www.linkedin.com/in/thomas-labrusse/' target='_blank'>
 					<img
-						src='/images/linkedin-icon.svg'
+						src='/images/icons/linkedin-icon.svg'
 						alt='github icon'
 						className={classes.icon}
 					/>
