@@ -21,43 +21,50 @@ const ProjectCard = (props) => {
 				<img src={image} />
 			</div>
 			<div className={classes['card-infos']}>
-				<h1 className={classes.name}>{name}</h1>
-				<p className={classes.description}>{shortDescription}</p>
+				<div className={classes['text-description']}>
+					<h1 className={classes.name}>{name}</h1>
+					<p className={classes.description}>{shortDescription}</p>
+				</div>
 				<div className={classes.tags}>
 					{stack.map((tag) => (
 						<Tag label={tag} />
 					))}
 				</div>
-				<div className={classes['links-container']}>
-					{github && (
-						<a href={github} target='_blank'>
+				<div className={classes['card-bottom']}>
+					<div className={classes['links-container']}>
+						{github && (
+							<a href={github} target='_blank'>
+								<img
+									src='/images/github-icon-dark.svg'
+									alt='github icon'
+									className={classes.icon}
+								/>
+							</a>
+						)}
+						{url && (
+							<a href={url} target='_blank'>
+								<img
+									src='/images/globe-icon.svg'
+									alt='world icon'
+									className={classes.icon}
+								/>
+							</a>
+						)}
+					</div>
+					<div className={classes['more-container']}>
+						<button
+							className={classes.button}
+							onClick={showProjectDetailHandler}
+						>
+							<span className={classes['button-text']}>see more</span>
 							<img
-								src='/images/github-icon-dark.svg'
-								alt='github icon'
-								className={classes.icon}
+								src='/images/arrow-right-icon.svg'
+								className={classes['button-icon']}
+								alt=''
 							/>
-						</a>
-					)}
-					{url && (
-						<a href={url} target='_blank'>
-							<img
-								src='/images/globe-icon.svg'
-								alt='world icon'
-								className={classes.icon}
-							/>
-						</a>
-					)}
+						</button>
+					</div>
 				</div>
-			</div>
-			<div className={classes['button-container']}>
-				<button className={classes.button} onClick={showProjectDetailHandler}>
-					more
-				</button>
-				{/* <div className={classes.test}>
-					<Link href={`/${id}`}>
-						<p>{`goes to : ${id}`}</p>
-					</Link>
-				</div> */}
 			</div>
 		</div>
 	)
