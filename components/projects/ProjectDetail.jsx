@@ -19,8 +19,8 @@ const Project = (props) => {
 			</div>
 			<p className={classes.description}>{description}</p>
 			<div className={classes.tags}>
-				{stack.map((tag) => (
-					<Tag label={tag} />
+				{stack.map((tag, id) => (
+					<Tag label={tag} key={id} />
 				))}
 			</div>
 			{github && (

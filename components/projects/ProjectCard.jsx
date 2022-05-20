@@ -36,8 +36,8 @@ const ProjectCard = (props) => {
 					<p className={classes.description}>{shortDescription}</p>
 				</div>
 				<div className={classes.tags}>
-					{stack.map((tag) => (
-						<Tag label={tag} />
+					{stack.map((tag, id) => (
+						<Tag label={tag} key={id} />
 					))}
 				</div>
 				<div className={classes['card-bottom']}>
