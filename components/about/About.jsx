@@ -55,7 +55,7 @@ const About = () => {
 				<span>
 					If you’re interested, feel free to check out some of the small{' '}
 					<span className={classes.link}>
-						<Link href='./'>projects</Link>
+						<Link href='/projects'>projects</Link>
 					</span>{' '}
 					I’ve created, either as learning experiments, for my personal use, or
 					both.
