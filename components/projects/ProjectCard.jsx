@@ -9,11 +9,20 @@ import classes from './ProjectCard.module.css'
 const ProjectCard = (props) => {
 	const router = useRouter()
 
-	const { id, name, shortDescription, image, thumbnail, stack, github, url } =
-		props
+	const {
+		id,
+		name,
+		slug,
+		shortDescription,
+		image,
+		thumbnail,
+		stack,
+		github,
+		url,
+	} = props
 
 	const showProjectDetailHandler = () => {
-		router.push('/projects/' + id)
+		router.push('/projects/' + slug)
 	}
 
 	return (

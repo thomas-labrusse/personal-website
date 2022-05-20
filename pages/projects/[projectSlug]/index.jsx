@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ProjectDetail from '../../../components/projects/ProjectDetail'
-import { PROJECTS } from '../../projects'
+import { PROJECTS } from '..'
 
 const ProjectDetailPage = (props) => {
 	return (
@@ -22,27 +22,27 @@ const ProjectDetailPage = (props) => {
 export async function getStaticPaths() {
 	console.log(PROJECTS)
 
-	// return {
-	// 	fallback: 'blocking',
-	// 	paths: PROJECTS.map((project) => ({
-	// 		params: {
-	// 			projectId: project.id,
-	// 		},
-	// 	})),
-	// }
 	return {
 		fallback: false,
-		paths: [
-			{ params: { projectId: '1' } },
-			{ params: { projectId: '2' } },
-			{ params: { projectId: '3' } },
-		],
+		paths: PROJECTS.map((project) => ({
+			params: {
+				projectSlug: project.slug,
+			},
+		})),
 	}
+	// return {
+	// 	fallback: false,
+	// 	paths: [
+	// 		{ params: { projectId: '1' } },
+	// 		{ params: { projectId: '2' } },
+	// 		{ params: { projectId: '3' } },
+	// 	],
+	// }
 }
 
 export async function getStaticProps(context) {
-	const projectId = context.params.projectId
-	const data = PROJECTS.filter((project) => project.id === projectId)
+	const projectSlug = context.params.projectSlug
+	const data = PROJECTS.filter((project) => project.slug === projectSlug)
 
 	return {
 		props: {

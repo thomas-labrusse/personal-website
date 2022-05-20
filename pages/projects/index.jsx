@@ -5,6 +5,7 @@ export const PROJECTS = [
 	{
 		id: '1',
 		name: 'Races Medal NFTs',
+		slug: 'solana-mint-dapp',
 		shortDescription:
 			'Low carbon footprint NFTs that act as digital medals only races finishers can redeem.',
 		thumbnail: '../images/minter-thumbnail.png',
@@ -17,6 +18,7 @@ export const PROJECTS = [
 	},
 	{
 		id: '2',
+		slug: 'chrome-extension',
 		name: 'OpenSea Rarity Chrome Extension',
 		shortDescription:
 			'Calculate and display NFT collections rarity directly on page',
@@ -29,6 +31,7 @@ export const PROJECTS = [
 	},
 	{
 		id: '3',
+		slug: 'slack-bot',
 		name: 'Attendance Slack Bot',
 		shortDescription:
 			'Small Slack Bot allowing coworking members to flag their presence',
