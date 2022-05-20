@@ -20,8 +20,6 @@ const ProjectDetailPage = (props) => {
 }
 
 export async function getStaticPaths() {
-	console.log(PROJECTS)
-
 	return {
 		fallback: false,
 		paths: PROJECTS.map((project) => ({
