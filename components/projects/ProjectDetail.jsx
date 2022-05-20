@@ -15,7 +15,7 @@ const Project = (props) => {
 			<h1 className={classes.name}>{name}</h1>
 			<p className={classes['main-description']}>{shortDescription}</p>
 			<div className={classes['image-container']}>
-				<img className={classes.image} src={image}></img>
+				<img className={classes.image} src={image} alt={name}></img>
 			</div>
 			<p className={classes.description}>{description}</p>
 			<div className={classes.tags}>

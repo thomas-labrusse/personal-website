@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 import ProjectDetail from '../../../components/projects/ProjectDetail'
 import { PROJECTS } from '..'
@@ -6,6 +7,10 @@ import { PROJECTS } from '..'
 const ProjectDetailPage = (props) => {
 	return (
 		<div>
+			<Head>
+				<title>{props.projectData.name}</title>
+				<meta name='description' content={props.projectData.shortDescription} />
+			</Head>
 			<ProjectDetail
 				name={props.projectData.name}
 				shortDescription={props.projectData.shortDescription}

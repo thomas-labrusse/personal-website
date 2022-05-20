@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import Projects from '../../components/projects/Projects'
 
 export const PROJECTS = [
@@ -47,6 +48,13 @@ export const PROJECTS = [
 const ProjectsPage = () => {
 	return (
 		<>
+			<Head>
+				<title>Projects</title>
+				<meta
+					name='description'
+					content="Selected projects I've been working on : chrome extension, slack bot, solana mint dapp. Using React, NodeJS, Express, and more..."
+				/>
+			</Head>
 			<Projects projects={PROJECTS} />
 		</>
 	)

@@ -28,7 +28,7 @@ const ProjectCard = (props) => {
 	return (
 		<div className={classes.card}>
 			<div className={classes['image-container']}>
-				<img src={thumbnail} />
+				<img src={thumbnail} alt={name} />
 			</div>
 			<div className={classes['card-infos']}>
 				<div className={classes['text-description']}>
@@ -70,7 +70,7 @@ const ProjectCard = (props) => {
 							<img
 								src='/images/icons/arrow-right-icon.svg'
 								className={classes['button-icon']}
-								alt=''
+								alt='arrow right icon'
 							/>
 						</button>
 					</div>
