@@ -10,7 +10,7 @@ export const PROJECTS = [
 		thumbnail: '../images/minter-thumbnail.png',
 		image: '../images/minter-300h.png',
 		description:
-			'Web3 application allowing races organizers to offer digital medals (NFTs) to finishers. The NFTs are stored on the Solana blockchain, a proof of history / proof of stake blockchain with very low carbon footprint impact. Finishers can mint their medal NFT directly by connecting their Phantom wallet to the App. A "medal cabinet" page allows medal owners to display all their medals linked to their connected wallet. App developed with React, using solana Metaplex NFT standard and Candy Machine v2 for the mint. Designed on Figma. A first working version was made on the Ethereum blockchain using a solidity smart contract library for NFTs. Moved to Solana to limit significantly the environmental impact of transactions',
+			'Web3 application allowing races organizers to offer digital medals (NFTs) to finishers. The NFTs are stored on the Solana blockchain, a proof of history / proof of stake blockchain with very low carbon footprint impact. Finishers can mint their medal NFT directly by connecting their Phantom wallet to the App. A "medal cabinet" page allows medal owners to display all their medals linked to their connected wallet. App developed with React, using solana Metaplex NFT standard and Candy Machine v2 for the mint. Designed on Figma. A first working version was made on the Ethereum blockchain using a solidity smart contract library for NFTs. Moved to Solana to limit significantly the environmental impact of transactions.',
 		stack: ['React', 'web3', 'solana-blockchain', 'scss', 'figma'],
 		github: 'https://github.com/thomas-labrusse',
 		// url: 'https://google.com/',
@@ -23,8 +23,8 @@ export const PROJECTS = [
 		thumbnail: '../images/chrome-extension-thumbnail.png',
 		image: '../images/chrome-extension.gif',
 		description:
-			'Project longer description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempore est beatae expedita magni minima commodi autem hic! Assumenda commodi suscipit obcaecati! Molestias consequuntur consequatur earum modi neque dolor iure aspernatur laudantium eligendi distinctio hic quia aliquam exercitationem cumque dicta nisi, provident perspiciatis quisquam molestiae? Dolorum officiis accusamus ad corrupti!',
-		stack: ['React', 'NodeJS', 'Express', 'MongoDB'],
+			"Chrome extension written in React, database on MongoDB with a server ran locally . Displays NFT collection's item's rarity rank directly on the 'item' and 'activity' pages on OpenSea. Any ERC721 compliant NFT collection can be added to the database by inputting the corresponding smart contract hash. URIs of NFT Metadata are fetched by querying the blockchain using the ethers library. Individual NFT ranks are calculated by retrieving all items in the collection, processing all existing traits and rating them. Each individual item is then stored in a MongoDB database. Using a mutation observer, HTML elements with item's rarity ranking are injected directly into the DOM.",
+		stack: ['React', 'ethers', 'NodeJS', 'Express', 'MongoDB'],
 		github: 'https://github.com/thomas-labrusse',
 	},
 	{
