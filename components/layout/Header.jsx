@@ -8,7 +8,12 @@ const Header = () => {
 	return (
 		<div className={classes.header}>
 			<div className={classes['image-container']}>
-				<Image src={profilePic} alt='id photo' className={classes.photo} />
+				<Image
+					src={profilePic}
+					alt='id photo'
+					className={classes.photo}
+					layout='fill'
+				/>
 			</div>
 			<div className={classes.navbar}>
 				<div className={`${classes.link} ${classes.left}`}>
