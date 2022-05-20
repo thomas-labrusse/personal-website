@@ -1,16 +1,14 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import classes from './Header.module.css'
+import profilePic from '../../public/images/photo-id-format.png'
 
 const Header = () => {
 	return (
 		<div className={classes.header}>
 			<div className={classes['image-container']}>
-				<img
-					src='../images/photo-id-format.png'
-					alt='id photo'
-					className={classes.photo}
-				/>
+				<Image src={profilePic} alt='id photo' className={classes.photo} />
 			</div>
 			<div className={classes.navbar}>
 				<div className={`${classes.link} ${classes.left}`}>
