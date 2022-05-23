@@ -38,10 +38,9 @@ const About = () => {
 			</p>
 			<p>
 				<span>
-					Since early 2021 I’ve been learning how to code. I'm very grateful to
-					have been able to use my time to do this. Learning and share
-					knowledge, in all aspects of life, as always been, and will remain my
-					main driver.
+					Since early 2021 I’ve been learning how to code. Learning from others
+					and sharing knowledge, in all aspects of life, as always been, and
+					will remain my main driver.
 				</span>
 			</p>
 			<p>
