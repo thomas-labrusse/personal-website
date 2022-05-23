@@ -12,8 +12,16 @@ export const PROJECTS = [
 		thumbnail: '../images/minter-thumbnail.png',
 		image: '../images/minter-300h.png',
 		description:
-			'Web3 application allowing races organizers to offer digital medals (NFTs) to finishers. The NFTs are stored on the Solana blockchain, a proof of history / proof of stake blockchain with very low carbon footprint impact. Finishers can mint their medal NFT directly by connecting their Phantom wallet to the App. A "medal cabinet" page allows medal owners to display all their medals linked to their connected wallet. App developed with React, using solana Metaplex NFT standard and Candy Machine v2 for the mint. Designed on Figma. A first working version was made on the Ethereum blockchain using a solidity smart contract library for NFTs. Moved to Solana to limit significantly the environmental impact of transactions.',
-		stack: ['React', 'web3', 'solana-blockchain', 'scss', 'figma'],
+			'Web3 application allowing races organizers to offer digital medals (NFTs) to finishers. The NFTs are stored on the Solana blockchain, a proof of history / proof of stake blockchain with very low carbon footprint impact. Finishers can mint their medal NFT directly by connecting their Phantom wallet to the App. A "medal cabinet" page allows medal owners to display all their medals linked to their connected wallet. App developed with React, using solana Metaplex NFT standard and Candy Machine v2 for the mint. Designed on Figma. A first working version was made on the Ethereum blockchain using a Solidity smart contract library for NFTs, Mocha test framework and Chai assertions library. Moved to Solana to limit significantly the environmental impact of transactions.',
+		stack: [
+			'React',
+			'web3',
+			'solana-blockchain',
+			'scss',
+			'figma',
+			'mocha',
+			'chai',
+		],
 		github: 'https://github.com/thomas-labrusse',
 		// url: 'https://google.com/',
 	},
