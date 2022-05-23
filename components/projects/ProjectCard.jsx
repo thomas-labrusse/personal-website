@@ -28,7 +28,7 @@ const ProjectCard = (props) => {
 	return (
 		<div className={classes.card}>
 			<div className={classes['image-container']}>
-				<img src={thumbnail} alt={name} />
+				<img src={thumbnail} alt={name} className={classes.image} />
 			</div>
 			<div className={classes['card-infos']}>
 				<div className={classes['text-description']}>
