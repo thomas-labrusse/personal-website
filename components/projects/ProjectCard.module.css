@@ -52,6 +52,13 @@
 	margin: 0px 0px 16px 0px;
 }
 
+.bottom-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 110px;
+}
+
 .tags {
 	display: flex;
 	flex-direction: row;

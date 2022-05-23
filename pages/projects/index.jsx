@@ -27,10 +27,23 @@ export const PROJECTS = [
 	},
 	{
 		id: '2',
+		slug: 'personal-website',
+		name: 'Personal Website',
+		shortDescription: 'Portfolio of personal projects, powered by NextJS.',
+		thumbnail: '../images/personal-website-thumbnail.png',
+		image: '../images/personal-website-300h.png',
+		description:
+			'This personal website project was a good opportunity to learn the basics of NextJS, taking advantage of its page / route feature, SEO friendliness and ease of deployment.',
+		stack: ['NextJS', 'React', 'Vercel', 'figma'],
+		github: 'https://github.com/thomas-labrusse/personal-website',
+		url: 'https://www.thomaslabrusse.com/',
+	},
+	{
+		id: '3',
 		slug: 'chrome-extension',
 		name: 'OpenSea Rarity Chrome Extension',
 		shortDescription:
-			'Calculate and display NFT collections rarity directly on page',
+			'Calculate and display NFT collections rarity directly on page.',
 		thumbnail: '../images/chrome-extension-thumbnail.png',
 		image: '../images/chrome-extension.gif',
 		description:
@@ -39,11 +52,11 @@ export const PROJECTS = [
 		github: 'https://github.com/thomas-labrusse',
 	},
 	{
-		id: '3',
+		id: '4',
 		slug: 'slack-bot',
 		name: 'Attendance Slack Bot',
 		shortDescription:
-			'Small Slack Bot allowing coworking members to flag their presence',
+			'Small Slack Bot allowing coworking members to flag their presence.',
 		thumbnail: '../images/slack-bot-thumbnail.png',
 		image: '../images/slack-bot.gif',
 		description:
