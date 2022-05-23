@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import ProjectDetail from '../../../components/projects/ProjectDetail'
-import { PROJECTS } from '..'
+import { PROJECTS } from '../index'
 
 const ProjectDetailPage = (props) => {
 	return (
