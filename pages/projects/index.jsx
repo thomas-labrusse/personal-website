@@ -49,7 +49,7 @@ export const PROJECTS = [
 		description:
 			"Chrome extension written in React, database on MongoDB with a server ran locally . Displays NFT collection's item's rarity rank directly on the 'item' and 'activity' pages on OpenSea. Any ERC721 compliant NFT collection can be added to the database by inputting the corresponding smart contract hash. URIs of NFT Metadata are fetched by querying the blockchain using the ethers library. Individual NFT ranks are calculated by retrieving all items in the collection, processing all existing traits and rating them. Each individual item is then stored in a MongoDB database. Using a mutation observer, HTML elements with item's rarity ranking are injected directly into the DOM.",
 		stack: ['React', 'ethers', 'NodeJS', 'Express', 'MongoDB'],
-		github: 'https://github.com/thomas-labrusse',
+		github: 'https://github.com/thomas-labrusse/chrome-extension-os',
 	},
 	{
 		id: '4',
