@@ -22,8 +22,8 @@ export const PROJECTS = [
 			'mocha',
 			'chai',
 		],
-		github: 'https://github.com/thomas-labrusse',
-		// url: 'https://google.com/',
+		github: 'https://github.com/thomas-labrusse/dapp-solana-minter',
+		url: 'https://finish-lines.netlify.app/',
 	},
 	{
 		id: '2',
