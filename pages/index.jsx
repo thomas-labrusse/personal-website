@@ -10,7 +10,7 @@ const HomePage = () => {
 				<title>About me</title>
 				<meta
 					name='description'
-					content="Mu current focus and a few projects I've been working on."
+					content="My current focus and a few projects I've been working on."
 				/>
 			</Head>
 			<About />

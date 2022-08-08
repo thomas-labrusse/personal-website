@@ -5,6 +5,20 @@ import Projects from '../../components/projects/Projects'
 export const PROJECTS = [
 	{
 		id: '1',
+		name: 'React Hooks By Example',
+		slug: 'react-hooks-examples',
+		shortDescription:
+			'Demonstate and explain how to use React hooks, using visual examples.',
+		thumbnail: '../images/minter-thumbnail.png',
+		image: '../images/minter-300h.png',
+		description:
+			'Tutorial / examples website to demonstrate how to use React hooks.',
+		stack: ['NextJS', 'React', 'Vercel'],
+		github: 'https://github.com/thomas-labrusse/react-inception',
+		url: 'https://react-fishing-rod.vercel.app/',
+	},
+	{
+		id: '2',
 		name: 'Races Medal NFTs',
 		slug: 'solana-mint-dapp',
 		shortDescription:
@@ -26,7 +40,7 @@ export const PROJECTS = [
 		url: 'https://finish-lines.netlify.app/',
 	},
 	{
-		id: '2',
+		id: '3',
 		slug: 'personal-website',
 		name: 'Personal Website',
 		shortDescription: 'Portfolio of personal projects, powered by NextJS.',
@@ -39,7 +53,7 @@ export const PROJECTS = [
 		url: 'https://www.thomaslabrusse.com/',
 	},
 	{
-		id: '3',
+		id: '4',
 		slug: 'chrome-extension',
 		name: 'OpenSea Rarity Chrome Extension',
 		shortDescription:
@@ -52,7 +66,7 @@ export const PROJECTS = [
 		github: 'https://github.com/thomas-labrusse/chrome-extension-os',
 	},
 	{
-		id: '4',
+		id: '5',
 		slug: 'slack-bot',
 		name: 'Attendance Slack Bot',
 		shortDescription:
