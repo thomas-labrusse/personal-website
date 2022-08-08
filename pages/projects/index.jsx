@@ -12,7 +12,7 @@ export const PROJECTS = [
 		thumbnail: '../images/react-hooks-thumbnail.png',
 		image: '../images/react-hooks-300h.png',
 		description:
-			'The React framework and its team is noticeably tilting towards more use of functional components and hooks. The React team is even rethinking and rewriting its documentation, currently (2022) in beta. This website is the continuation of that effort to help developpers understand React, and provides practical / visual examples to do so. The website itself is a NextJS hosted with Vercel.',
+			'The React framework and its team is noticeably tilting towards more use of functional components and hooks. The React team is even rethinking and rewriting its documentation, currently (2022) in beta. This website is the continuation of that effort to help developpers understanding React hooks, and provides practical / visual examples to do so. The website itself is a NextJS hosted with Vercel.',
 		stack: ['NextJS', 'React', 'Vercel'],
 		github: 'https://github.com/thomas-labrusse/react-inception',
 		url: 'https://react-fishing-rod.vercel.app/',
