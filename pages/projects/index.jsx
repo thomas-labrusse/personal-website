@@ -5,14 +5,15 @@ import Projects from '../../components/projects/Projects'
 export const PROJECTS = [
 	{
 		id: '1',
-		name: 'React Hooks By Example',
-		slug: 'react-hooks-examples',
+		name: 'React Hooks',
+		slug: 'react-hooks',
 		shortDescription:
-			'Demonstate and explain how to use React hooks, using visual examples.',
-		thumbnail: '../images/minter-thumbnail.png',
-		image: '../images/minter-300h.png',
+			'Explaining how and when using React hooks, with visual examples.',
+		thumbnail: '../images/react-hooks-thumbnail.png',
+		image: '../images/react-hooks-thumbnail.png',
+		// image: '../images/react-hooks-300h.png',
 		description:
-			'Tutorial / examples website to demonstrate how to use React hooks.',
+			'The React framework and its team is noticeably tilting towards more use of functional components and hooks. The React team is even rethinking and rewriting its documentation, currently (2022) in beta. This website is the continuation of that effort to help developpers understand React, and provides practical / visual examples to do so. The website itself is a NextJS hosted with Vercel.',
 		stack: ['NextJS', 'React', 'Vercel'],
 		github: 'https://github.com/thomas-labrusse/react-inception',
 		url: 'https://react-fishing-rod.vercel.app/',
