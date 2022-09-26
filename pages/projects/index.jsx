@@ -5,6 +5,20 @@ import Projects from '../../components/projects/Projects'
 export const PROJECTS = [
 	{
 		id: '1',
+		name: 'React Native Routine App',
+		slug: 'react-native-routine-app',
+		shortDescription:
+			'A mobile app that helps you tracking your routine and make good habits stick. ',
+		thumbnail: '../images/react-native-thumbnail.png',
+		image: '../images/react-native-300h.png',
+		description:
+			"Mobile app built with react native and expo. User data is stored locally on the user's device, with Sqlite. Partially written with Typescript. The app allows to monitor new life habits. The user keeps track of whether she is properly following the routine she defined or not. Stats and visual feedback from the app help to keep the user engaged and motivated to keep up with her routine.",
+		stack: ['React Native', 'Typescript', 'Sqlite', 'Expo'],
+		github: 'https://github.com/thomas-labrusse/react-native-app.git',
+		url: 'https://vimeo.com/753859972',
+	},
+	{
+		id: '2',
 		name: 'React Hooks',
 		slug: 'react-hooks',
 		shortDescription:
@@ -18,7 +32,7 @@ export const PROJECTS = [
 		url: 'https://react-fishing-rod.vercel.app/',
 	},
 	{
-		id: '2',
+		id: '3',
 		name: 'Races Medal NFTs',
 		slug: 'solana-mint-dapp',
 		shortDescription:
@@ -40,7 +54,7 @@ export const PROJECTS = [
 		url: 'https://finish-lines.netlify.app/',
 	},
 	{
-		id: '3',
+		id: '4',
 		slug: 'personal-website',
 		name: 'Personal Website',
 		shortDescription: 'Portfolio of personal projects, powered by NextJS.',
@@ -53,7 +67,7 @@ export const PROJECTS = [
 		url: 'https://www.thomaslabrusse.com/',
 	},
 	{
-		id: '4',
+		id: '5',
 		slug: 'chrome-extension',
 		name: 'OpenSea Rarity Chrome Extension',
 		shortDescription:
@@ -66,7 +80,7 @@ export const PROJECTS = [
 		github: 'https://github.com/thomas-labrusse/chrome-extension-os',
 	},
 	{
-		id: '5',
+		id: '6',
 		slug: 'slack-bot',
 		name: 'Attendance Slack Bot',
 		shortDescription:
