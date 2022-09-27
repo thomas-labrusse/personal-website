@@ -45,9 +45,9 @@ const About = () => {
 			</p>
 			<p>
 				<span>
-					I’m currently working with the following technologies : JS(ES6),
-					React, NextJS, NodeJS, Express, MongoDB, Web3 libraries (ethers,
-					solana).
+					I’m currently working with the following technologies : React, React
+					Native, JS(ES6), Typescript, NextJS, NodeJS, Express, MongoDB, Sqlite,
+					Web3 libraries (ethers, solana).
 				</span>
 			</p>
 			<p>
@@ -57,7 +57,8 @@ const About = () => {
 						<Link href='/projects'>projects</Link>
 					</span>{' '}
 					I’ve created, either as learning experiments, for my personal use, or
-					both.
+					both. Including a mobile app, a NextJS website to help developers
+					understand React Hooks, a chrome extension, a slack bot and more.
 				</span>
 			</p>
 			<p>

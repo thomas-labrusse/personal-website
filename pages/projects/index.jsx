@@ -101,7 +101,7 @@ const ProjectsPage = () => {
 				<title>Projects</title>
 				<meta
 					name='description'
-					content="Selected projects I've been working on : chrome extension, slack bot, solana mint dapp. Using React, NodeJS, Express, and more..."
+					content="Selected projects I've been working on : mobile app, chrome extension, slack bot, solana mint dapp. Using React, Typescript, NodeJS, Express, and more..."
 				/>
 			</Head>
 			<Projects projects={PROJECTS} />
