@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+  }
+  
+  /* remove .main horizontal padding if width is under 480px */
+  
+  @media (max-width: 480px) {
+    .main {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  

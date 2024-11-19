@@ -1,0 +1,20 @@
+{
+  "Home": {
+    "title": "Bonjour le monde!",
+    "about": "Aller à la page à propos"
+  },
+  "Header": {
+    "websiteName": "Thomas Labrusse",
+    "LocaleSwitcher": {
+      "inputLabel": "Français"
+    }
+  },
+  "Projects": {
+    "Flamingmo": {
+      "title": "Application mobile Flamingmo"
+    },
+    "Adaptorz": {
+      "title": "Adaptorz: Site en NextJS"
+    }
+  }
+}
