@@ -2,7 +2,7 @@ import { PROJECTS } from "@/app/projects";
 import { Container } from "@mui/material";
 import { setRequestLocale } from "next-intl/server";
 
-// export const dynamicParams = false;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const params = PROJECTS.map((project) => project.slug);

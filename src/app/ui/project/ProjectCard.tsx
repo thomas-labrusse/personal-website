@@ -6,13 +6,12 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  Chip,
-  Avatar,
+  CardActionArea,
 } from "@mui/material";
 import { Locale, useRouter } from "@/i18n/routing";
 import { Project } from "@/app/projects";
 import { useLocale } from "next-intl";
-import styles from "@/app/ui/project/ProjectCard.module.css";
+import StackList from "./StackList";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const router = useRouter();
@@ -24,56 +23,55 @@ export default function ProjectCard({ project }: { project: Project }) {
   };
   return (
     <Card
-      sx={{ display: "flex", mb: 4, width: "100%" }}
-      className={styles.card}
-      onClick={() => handleCardClick()}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        width: "360px",
+        height: "520px",
+      }}
     >
-      <CardMedia
-        component="img"
-        sx={{ width: 360, height: 270 }} // 4:3 aspect ratio
-        image={featureImage}
-        alt={name}
-      />
-      {/* <Box sx={{ display: "flex", flexDirection: "column", flex: 1 }}> */}
-      <CardContent
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          flex: 1,
-          width: "100%",
-        }}
+      <CardActionArea
+        sx={{ display: "flex", flexDirection: "column", height: "100%" }}
+        onClick={() => handleCardClick()}
       >
-        <Box>
-          <Typography
-            component="div"
-            variant="h5"
-            sx={{
-              mb: 1,
-            }}
-          >
-            {name}
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="text.secondary"
-            component="div"
-          >
-            {description[locale]}
-          </Typography>
-        </Box>
-        <Box sx={{ display: "flex", flexDirection: "row", gap: "0.7rem" }}>
-          {stack.map((tech) => (
-            <Chip
-              key={tech.name}
-              avatar={<Avatar src={tech.icon} />}
-              label={tech.name}
-              variant="outlined"
-            />
-          ))}
-        </Box>
-      </CardContent>
-      {/* </Box> */}
+        <CardMedia
+          component="img"
+          sx={{ width: 360, height: 270 }} // 4:3 aspect ratio
+          image={featureImage}
+          alt={name}
+        />
+        <CardContent
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            flex: 1,
+            width: "100%",
+            height: "100%",
+            p: 2,
+          }}
+        >
+          <Box>
+            <Typography
+              component="div"
+              variant="h3"
+              sx={{
+                mb: 1,
+              }}
+            >
+              {name}
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              color="text.secondary"
+              component="div"
+            >
+              {description[locale]}
+            </Typography>
+          </Box>
+          <StackList stack={stack} />
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
 }

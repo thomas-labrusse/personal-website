@@ -10,11 +10,8 @@
     }
   },
   "Projects": {
-    "Flamingmo": {
-      "title": "Application mobile Flamingmo"
-    },
-    "Adaptorz": {
-      "title": "Adaptorz: Site en NextJS"
+    "StackList": {
+      "madeWith": "Fait avec"
     }
   }
 }

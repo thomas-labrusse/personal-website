@@ -1,9 +1,9 @@
 import { PROJECTS } from "@/app/projects";
 import ProjectDetail from "@/app/ui/project/ProjectDetail";
-// import { Locale } from "@/i18n/routing";
+import Container from "@mui/material/Container";
 import { setRequestLocale } from "next-intl/server";
 
-// export const dynamicParams = false;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const params = PROJECTS.map((project) => project.slug);
@@ -23,5 +23,18 @@ export default function Page({
     return <div>Project not found</div>;
   }
 
-  return <ProjectDetail project={project} />;
+  return (
+    <Container
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "1.5rem",
+        padding: "1rem",
+        width: "100%",
+      }}
+    >
+      <ProjectDetail project={project} />;
+    </Container>
+  );
 }

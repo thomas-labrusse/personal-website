@@ -20,7 +20,9 @@ export default function Home() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
+          gap: "2rem",
+          flexWrap: "wrap",
           width: "100%",
           alignItems: "center",
           justifyContent: "center",
