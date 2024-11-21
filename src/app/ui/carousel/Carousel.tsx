@@ -128,7 +128,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               className={[
                 styles["embla__dot"],
                 index === selectedIndex ? styles["embla__dot--selected"] : "",
-              ].join("")}
+              ].join(" ")}
             />
           ))}
         </div>

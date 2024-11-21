@@ -21,7 +21,7 @@ export default function StackList({ stack }: StackListProps) {
         alignItems: "center",
         flexWrap: "wrap",
       }}
-      mt={4}
+      mt={3}
     >
       <Typography variant="h6">{t("madeWith")}:</Typography>
       {stack.map((tech) => (

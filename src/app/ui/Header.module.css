@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #001938;
+    background-color: var(--primary);
     color: #000;
     height: 60px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;

@@ -1,7 +1,7 @@
 "use client";
 
 import { createTheme } from "@mui/material/styles";
-import { blueElectric, fluoGreen } from "@/app/ui/colors";
+import { fluoGreen } from "@/app/ui/colors";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -57,9 +57,9 @@ export const myTheme = createTheme({
   },
   palette: {
     primary: {
-      main: blueElectric[800],
-      light: blueElectric[50],
-      dark: blueElectric[900],
+      main: "#001938",
+      light: "#5DA6FF",
+      dark: "#001024",
       contrastText: "#fff",
     },
     secondary: {

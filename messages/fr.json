@@ -11,7 +11,11 @@
   },
   "Projects": {
     "StackList": {
-      "madeWith": "Fait avec"
+      "madeWith": "Réalisé avec"
+    },
+    "ProjectDetail": {
+      "back": "Retour",
+      "visitSite": "Voir site"
     }
   }
 }

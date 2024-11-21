@@ -12,6 +12,10 @@ export type Project = {
     en: string;
     fr: string;
   };
+  techDescription: {
+    en: string;
+    fr: string;
+  };
   stack: Stack[];
   externalLink?: string;
 };
@@ -58,11 +62,6 @@ const tech = {
     icon: "/images/stack/mui-icon.svg",
     externalLink: "https://mui.com",
   },
-  vercel: {
-    name: "Vercel",
-    icon: "/images/stack/vercel-icon.svg",
-    externalLink: "https://vercel.com",
-  },
   firebase: {
     name: "Firebase",
     icon: "/images/stack/firebase-icon.svg",
@@ -91,8 +90,12 @@ export const PROJECTS: Project[] = [
       fr: "Jeu éducatif (tablette & mobile) pour amorcer l'apprentissage de la lecture.",
     },
     longDescription: {
-      en: "Flamingmo is an educational game for children to start learning to read. The game is designed to be played on a tablet or a smartphone. The game is available in English and French. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children",
-      fr: "Flamingmo est un jeu éducatif pour les enfants pour amorcer l'apprentissage de la lecture. Le jeu est conçu pour être joué sur une tablette ou un smartphone. Le jeu est disponible en anglais et en français. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants",
+      en: "Mobile and tablet application designed to introduce young children (ages 3-5) to reading. The app offers a series of mini-games: tracing a letter, identifying a phoneme at the beginning of a word, associating a grapheme with a phoneme, constructing a syllable, and building a word. Each level focuses on a specific grapheme to work on, using the phonics method.",
+      fr: "Application mobile et tablette destinée à introduire les jeunes enfants (3-5 ans) à la lecture. L’application propose une série de petits jeux: tracer une lettre, identifier un phonème au début d’un mot, associer un graphème à un phonème, construire une syllabe, un mot. Chaque niveau se concentre sur un graphème à travailler, en utilisant la méthode syllabique.",
+    },
+    techDescription: {
+      en: "The app was created with Flutter (a framework in Dart). Animations and interactions were developed using Rive, a tool that includes an API for controlling animations via Flutter. The illustrations were entirely hand-drawn in Illustrator.",
+      fr: "L’application a été créée avec Flutter (framework en Dart). Les animations et interactions développées avec Rive, un outil qui inclut une API permettant de contrôler les animations via Flutter. Les illustrations ont été conçues entièrement à la main, sur Illustrator.",
     },
     stack: [tech["flutter"], tech["rive"]],
   },
@@ -111,10 +114,14 @@ export const PROJECTS: Project[] = [
       fr: "Un site Web NextJS pour aider les voyageurs à trouver le bon adaptateur de voyage pour leur prochain voyage.",
     },
     longDescription: {
-      en: "Flamingmo is an educational game for children to start learning to read. The game is designed to be played on a tablet or a smartphone. The game is available in English and French. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children",
-      fr: "Flamingmo est un jeu éducatif pour les enfants pour amorcer l'apprentissage de la lecture. Le jeu est conçu pour être joué sur une tablette ou un smartphone. Le jeu est disponible en anglais et en français. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants",
+      en: "Adaptorz helps users check the compatibility of power outlets and electrical devices worldwide. The site allows users to specifically select the plugs for their devices and choose multiple destination countries at once. The tool then suggests travel adapters that perfectly match their needs.",
+      fr: "Adaptorz permet de vérifier la compatibilité des prises de courants et des appareils électriques dans le monde. Le site permet de sélectionner spécifiquement les prises de ses appareils, et de choisir plusieurs pays de destinations à la fois. L’outil suggère ensuite des adaptateurs de voyage qui correspondent exactement au besoin.",
     },
-    stack: [tech["react"], tech["nextjs"], tech["mui"], tech["vercel"]],
+    techDescription: {
+      en: "Multilingual site built with NextJS (App Router). The pages are static (generated with generateStaticParams()) to optimize SEO. One month after launch, the site averages 2,000 impressions per day.",
+      fr: "Site multilingue fait avec NextJS (App Router). Les pages sont statiques (générées avec generateStaticParams()) pour optimiser le SEO. Un mois après son lancement, le site génère une moyenne de 2 000 impressions / jour.",
+    },
+    stack: [tech["react"], tech["nextjs"], tech["mui"]],
     externalLink: "https://adaptorz.com",
   },
   {
@@ -132,8 +139,12 @@ export const PROJECTS: Project[] = [
       fr: "Une application pour les maisons de retraites.",
     },
     longDescription: {
-      en: "Flamingmo is an educational game for children to start learning to read. The game is designed to be played on a tablet or a smartphone. The game is available in English and French. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children",
-      fr: "Flamingmo est un jeu éducatif pour les enfants pour amorcer l'apprentissage de la lecture. Le jeu est conçu pour être joué sur une tablette ou un smartphone. Le jeu est disponible en anglais et en français. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants",
+      en: "Adaptorz helps users check the compatibility of power outlets and electrical devices worldwide. The site allows users to specifically select the plugs for their devices and choose multiple destination countries at once. The tool then suggests travel adapters that perfectly match their needs.",
+      fr: "Adaptorz permet de vérifier la compatibilité des prises de courants et des appareils électriques dans le monde. Le site permet de sélectionner spécifiquement les prises de ses appareils, et de choisir plusieurs pays de destinations à la fois. L’outil suggère ensuite des adaptateurs de voyage qui correspondent exactement au besoin.",
+    },
+    techDescription: {
+      en: "Multilingual site built with NextJS (App Router). The pages are static (generated with generateStaticParams()) to optimize SEO. One month after launch, the site averages 2,000 impressions per day.",
+      fr: "Site multilingue fait avec NextJS (App Router). Les pages sont statiques (générées avec generateStaticParams()) pour optimiser le SEO. Un mois après son lancement, le site génère une moyenne de 2 000 impressions / jour.",
     },
     stack: [tech["react"], tech["firebase"]],
   },
@@ -155,8 +166,12 @@ export const PROJECTS: Project[] = [
       fr: "Une application tablette à utiliser dans les chambres des résidents en maison de retraite.",
     },
     longDescription: {
-      en: "Flamingmo is an educational game for children to start learning to read. The game is designed to be played on a tablet or a smartphone. The game is available in English and French. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children",
-      fr: "Flamingmo est un jeu éducatif pour les enfants pour amorcer l'apprentissage de la lecture. Le jeu est conçu pour être joué sur une tablette ou un smartphone. Le jeu est disponible en anglais et en français. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants",
+      en: "Adaptorz helps users check the compatibility of power outlets and electrical devices worldwide. The site allows users to specifically select the plugs for their devices and choose multiple destination countries at once. The tool then suggests travel adapters that perfectly match their needs.",
+      fr: "Adaptorz permet de vérifier la compatibilité des prises de courants et des appareils électriques dans le monde. Le site permet de sélectionner spécifiquement les prises de ses appareils, et de choisir plusieurs pays de destinations à la fois. L’outil suggère ensuite des adaptateurs de voyage qui correspondent exactement au besoin.",
+    },
+    techDescription: {
+      en: "Multilingual site built with NextJS (App Router). The pages are static (generated with generateStaticParams()) to optimize SEO. One month after launch, the site averages 2,000 impressions per day.",
+      fr: "Site multilingue fait avec NextJS (App Router). Les pages sont statiques (générées avec generateStaticParams()) pour optimiser le SEO. Un mois après son lancement, le site génère une moyenne de 2 000 impressions / jour.",
     },
     stack: [tech["reactNative"], tech["firebase"]],
   },
@@ -175,8 +190,12 @@ export const PROJECTS: Project[] = [
       fr: "Application tablette pour Edilians.",
     },
     longDescription: {
-      en: "Flamingmo is an educational game for children to start learning to read. The game is designed to be played on a tablet or a smartphone. The game is available in English and French. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children",
-      fr: "Flamingmo est un jeu éducatif pour les enfants pour amorcer l'apprentissage de la lecture. Le jeu est conçu pour être joué sur une tablette ou un smartphone. Le jeu est disponible en anglais et en français. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants",
+      en: "Adaptorz helps users check the compatibility of power outlets and electrical devices worldwide. The site allows users to specifically select the plugs for their devices and choose multiple destination countries at once. The tool then suggests travel adapters that perfectly match their needs.",
+      fr: "Adaptorz permet de vérifier la compatibilité des prises de courants et des appareils électriques dans le monde. Le site permet de sélectionner spécifiquement les prises de ses appareils, et de choisir plusieurs pays de destinations à la fois. L’outil suggère ensuite des adaptateurs de voyage qui correspondent exactement au besoin.",
+    },
+    techDescription: {
+      en: "Multilingual site built with NextJS (App Router). The pages are static (generated with generateStaticParams()) to optimize SEO. One month after launch, the site averages 2,000 impressions per day.",
+      fr: "Site multilingue fait avec NextJS (App Router). Les pages sont statiques (générées avec generateStaticParams()) pour optimiser le SEO. Un mois après son lancement, le site génère une moyenne de 2 000 impressions / jour.",
     },
     stack: [tech["react"], tech["reactQuery"]],
   },
@@ -197,8 +216,12 @@ export const PROJECTS: Project[] = [
       fr: "Petit projet pour apprendre les hooks React.",
     },
     longDescription: {
-      en: "Flamingmo is an educational game for children to start learning to read. The game is designed to be played on a tablet or a smartphone. The game is available in English and French. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children aged 3 to 6. The game is designed to be played by children",
-      fr: "Flamingmo est un jeu éducatif pour les enfants pour amorcer l'apprentissage de la lecture. Le jeu est conçu pour être joué sur une tablette ou un smartphone. Le jeu est disponible en anglais et en français. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants de 3 à 6 ans. Le jeu est conçu pour être joué par des enfants",
+      en: "Adaptorz helps users check the compatibility of power outlets and electrical devices worldwide. The site allows users to specifically select the plugs for their devices and choose multiple destination countries at once. The tool then suggests travel adapters that perfectly match their needs.",
+      fr: "Adaptorz permet de vérifier la compatibilité des prises de courants et des appareils électriques dans le monde. Le site permet de sélectionner spécifiquement les prises de ses appareils, et de choisir plusieurs pays de destinations à la fois. L’outil suggère ensuite des adaptateurs de voyage qui correspondent exactement au besoin.",
+    },
+    techDescription: {
+      en: "Multilingual site built with NextJS (App Router). The pages are static (generated with generateStaticParams()) to optimize SEO. One month after launch, the site averages 2,000 impressions per day.",
+      fr: "Site multilingue fait avec NextJS (App Router). Les pages sont statiques (générées avec generateStaticParams()) pour optimiser le SEO. Un mois après son lancement, le site génère une moyenne de 2 000 impressions / jour.",
     },
     stack: [tech["nextjs"], tech["react"]],
     externalLink: "https://react-fishing-rod.vercel.app/",
