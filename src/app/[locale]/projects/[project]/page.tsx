@@ -6,7 +6,7 @@ import { setRequestLocale } from "next-intl/server";
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const params = PROJECTS.map((project) => project.slug);
+  const params = PROJECTS.map((project) => ({ project: project.slug }));
 
   return params;
 }
