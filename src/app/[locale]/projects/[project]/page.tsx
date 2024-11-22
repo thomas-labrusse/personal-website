@@ -21,8 +21,6 @@ export default function Page({
   params: { project: string; locale: string };
 }) {
   setRequestLocale(params.locale);
-  // const t = useTranslations("Projects.Page");
-  // const router = useRouter();
   const project = PROJECTS.find((p) => p.slug === params.project);
   if (!project) {
     return <div>Project not found</div>;
