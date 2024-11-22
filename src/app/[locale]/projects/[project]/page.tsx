@@ -2,6 +2,7 @@ import { PROJECTS } from "@/app/projects";
 import ProjectDetail from "@/app/ui/project/ProjectDetail";
 import Container from "@mui/material/Container";
 import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
 export const dynamicParams = true;
 
@@ -11,11 +12,10 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { project: string; locale: string };
-}) {
+type Params = Promise<{ project: string; locale: string }>;
+
+export default function Page(props: { params: Params }) {
+  const params = use(props.params);
   setRequestLocale(params.locale);
   const project = PROJECTS.find((p) => p.slug === params.project);
   if (!project) {
