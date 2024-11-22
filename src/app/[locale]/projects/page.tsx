@@ -1,6 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 
-export default function Page({ params }: { params: { locale: string } }) {
+export default async function Page({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale);
 
   return (

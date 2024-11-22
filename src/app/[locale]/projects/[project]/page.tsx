@@ -11,7 +11,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default function Page({
+export default async function Page({
   params,
 }: {
   params: { project: string; locale: string };

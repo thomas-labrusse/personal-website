@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default function Layout({
+export default async function Layout({
   children,
   params,
 }: {
