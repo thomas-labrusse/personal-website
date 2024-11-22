@@ -1,7 +1,7 @@
 {
   "Home": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "title": "Portfolio",
+    "greeting": "I develop web and mobile applications. Here are some of my work, either for clients or personal projects."
   },
   "Header": {
     "websiteName": "Thomas Labrusse",
@@ -17,5 +17,8 @@
       "back": "Back",
       "visitSite": "Visit site"
     }
+  },
+  "Footer": {
+    "createdBy": "Created by Thomas Labrusse"
   }
 }

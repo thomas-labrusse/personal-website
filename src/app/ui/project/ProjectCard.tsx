@@ -7,6 +7,7 @@ import {
   CardMedia,
   Typography,
   CardActionArea,
+  Chip,
 } from "@mui/material";
 import { Locale, useRouter } from "@/i18n/routing";
 import { Project } from "@/app/projects";
@@ -16,7 +17,7 @@ import StackList from "./StackList";
 export default function ProjectCard({ project }: { project: Project }) {
   const router = useRouter();
   const locale = useLocale() as Locale;
-  const { name, slug, featureImage, description, stack } = project;
+  const { name, slug, featureImage, projectType, description, stack } = project;
 
   const handleCardClick = () => {
     router.push(`/projects/${slug}`);
@@ -52,15 +53,29 @@ export default function ProjectCard({ project }: { project: Project }) {
           }}
         >
           <Box>
-            <Typography
-              component="div"
-              variant="h3"
+            <Box
               sx={{
-                mb: 1,
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
               }}
             >
-              {name}
-            </Typography>
+              <Typography
+                component="div"
+                variant="h3"
+                sx={{
+                  mb: 1,
+                }}
+              >
+                {name}
+              </Typography>
+              <Chip
+                label={projectType[locale]}
+                color="primary"
+                size="small"
+                variant={projectType.type === "hobby" ? "outlined" : "filled"}
+              />
+            </Box>
             <Typography
               variant="subtitle1"
               color="text.secondary"

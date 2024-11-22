@@ -1,7 +1,7 @@
 {
   "Home": {
-    "title": "Bonjour le monde!",
-    "about": "Aller à la page à propos"
+    "title": "Portfolio",
+    "greeting": "Je développe des applications web et mobile. Voici quelques unes de mes réalisations, pour des clients, ou pour des projets personnels."
   },
   "Header": {
     "websiteName": "Thomas Labrusse",
@@ -17,5 +17,8 @@
       "back": "Retour",
       "visitSite": "Voir site"
     }
+  },
+  "Footer": {
+    "createdBy": "Créé par Thomas Labrusse"
   }
 }

@@ -2,6 +2,7 @@ export type Project = {
   name: string;
   slug: string;
   link: string;
+  projectType: ProjectType;
   featureImage: string; // path to image 4:3 aspect ratio
   images: string[]; // paths to images
   description: {
@@ -24,6 +25,12 @@ type Stack = {
   name: string;
   icon: string;
   externalLink: string;
+};
+
+type ProjectType = {
+  type: "hobby" | "contract";
+  en: string;
+  fr: string;
 };
 
 const tech = {
@@ -69,11 +76,25 @@ const tech = {
   },
 };
 
+const ProjectTypes: Record<string, ProjectType> = {
+  hobby: {
+    type: "hobby",
+    en: "Hobby",
+    fr: "Hobby",
+  },
+  contract: {
+    type: "contract",
+    en: "Contract",
+    fr: "Contrat",
+  },
+};
+
 export const PROJECTS: Project[] = [
   {
     name: "Flamingmo",
     slug: "flamingmo",
     link: "/projects/flamingmo",
+    projectType: ProjectTypes.hobby,
     featureImage: "/images/projects/flamingmo-feature.png",
     images: [
       "/images/projects/flamingmo-1.png",
@@ -103,6 +124,7 @@ export const PROJECTS: Project[] = [
     name: "Adaptorz",
     slug: "adaptorz",
     link: "/projects/adaptorz",
+    projectType: ProjectTypes.hobby,
     featureImage: "/images/projects/adaptorz-feature.png",
     images: [
       "/images/projects/adaptorz-1.png",
@@ -128,6 +150,7 @@ export const PROJECTS: Project[] = [
     name: "Iskus - web app",
     slug: "iskus-web",
     link: "/projects/iskus-web",
+    projectType: ProjectTypes.contract,
     featureImage: "/images/projects/iskus-web-feature.png",
     images: [
       "/images/projects/iskus-web-1.png",
@@ -135,16 +158,16 @@ export const PROJECTS: Project[] = [
       "/images/projects/iskus-web-3.png",
     ],
     description: {
-      en: "An app for retirement homes.",
-      fr: "Une application pour les maisons de retraites.",
+      en: "Web app for retirement homes.",
+      fr: "Application web pour les maisons de retraites.",
     },
     longDescription: {
-      en: "Adaptorz helps users check the compatibility of power outlets and electrical devices worldwide. The site allows users to specifically select the plugs for their devices and choose multiple destination countries at once. The tool then suggests travel adapters that perfectly match their needs.",
-      fr: "Adaptorz permet de vérifier la compatibilité des prises de courants et des appareils électriques dans le monde. Le site permet de sélectionner spécifiquement les prises de ses appareils, et de choisir plusieurs pays de destinations à la fois. L’outil suggère ensuite des adaptateurs de voyage qui correspondent exactement au besoin.",
+      en: "A web application designed for nursing homes, developed for Iskus (early stage start-up). The app centralizes “transmissions” created via tablets installed in residents' rooms. It also allows: managing user records, administrative and medical files of residents (dietary restrictions, allergies, pathologies, drugs prescriptions, etc.), care plans, and an agenda. A 'kitchen' module displays all residents' dietary restrictions on a single screen.",
+      fr: "Application web destiné au EPHAD, développée pour Iskus (start-up early stage). L’app centralise les transmissions créées via des tablettes installées dans les chambres des résidents. Elle permet également de : gérer les dossiers des utilisateurs, les dossiers administratifs et médicaux des résidents (contraintes alimentaires, allergies, pathologies, posologies des médicaments, etc.) ainsi que leur plan de soins, et un planning. Un module “cuisine” permet d’afficher sur un seul écran l’ensemble des contraintes alimentaires des résidents.",
     },
     techDescription: {
-      en: "Multilingual site built with NextJS (App Router). The pages are static (generated with generateStaticParams()) to optimize SEO. One month after launch, the site averages 2,000 impressions per day.",
-      fr: "Site multilingue fait avec NextJS (App Router). Les pages sont statiques (générées avec generateStaticParams()) pour optimiser le SEO. Un mois après son lancement, le site génère une moyenne de 2 000 impressions / jour.",
+      en: "The web app was developed using React, React Router for navigation, and Firebase for authentication management and database (Firestore).",
+      fr: "L’application web a été développée avec React, React Router pour la navigation, Firebase pour la gestion de l’authentification et la base de donnée (Firestore).",
     },
     stack: [tech["react"], tech["firebase"]],
   },
@@ -152,6 +175,7 @@ export const PROJECTS: Project[] = [
     name: "Iskus - tablet app",
     slug: "iskus-tablet",
     link: "/projects/iskus-tablet",
+    projectType: ProjectTypes.contract,
     featureImage: "/images/projects/iskus-tablet-feature.png",
     images: [
       "/images/projects/iskus-tablet-1.jpg",
@@ -162,16 +186,16 @@ export const PROJECTS: Project[] = [
       "/images/projects/iskus-tablet-6.jpg",
     ],
     description: {
-      en: "A tablet app to use in the residents' rooms in a retirement home.",
-      fr: "Une application tablette à utiliser dans les chambres des résidents en maison de retraite.",
+      en: "A tablet app used in the residents' rooms in retirement homes.",
+      fr: "Application tablette utilisée dans les chambres des résidents en maison de retraite.",
     },
     longDescription: {
-      en: "Adaptorz helps users check the compatibility of power outlets and electrical devices worldwide. The site allows users to specifically select the plugs for their devices and choose multiple destination countries at once. The tool then suggests travel adapters that perfectly match their needs.",
-      fr: "Adaptorz permet de vérifier la compatibilité des prises de courants et des appareils électriques dans le monde. Le site permet de sélectionner spécifiquement les prises de ses appareils, et de choisir plusieurs pays de destinations à la fois. L’outil suggère ensuite des adaptateurs de voyage qui correspondent exactement au besoin.",
+      en: "A tablet application installed in the rooms of nursing home (EPHAD) residents. Authentication is performed either by entering a password or scanning a QR code generated via the web app. The tablet app works in tandem with the web app, allowing the recording of 'transmissions' to monitor the resident's daily life and medical variables. It also displays the care plan that must be completed and validated daily by nurses and caregivers. A dedicated page provides access to standard protocols (hygiene, care), making them readily available in the field.",
+      fr: "Application tablette installée dans les chambres des résidents en EPHAD. L’authentification se fait par saisie de mot de passe, ou en scannant un QR code généré via l’application web. L’app tablette fonctionne de concert avec l’application web, elle permet d’enregistrer des “transmissions” afin de monitorer le quotidien et les variables médicales du résident. Elle affiche aussi le plan de soins qui doit être effectué et validé quotidiennement par les infirmières et aides soignantes. Une page donne accès aux protocoles standards (hygiène, soins), pour les rendre disponibles sur le terrain.",
     },
     techDescription: {
-      en: "Multilingual site built with NextJS (App Router). The pages are static (generated with generateStaticParams()) to optimize SEO. One month after launch, the site averages 2,000 impressions per day.",
-      fr: "Site multilingue fait avec NextJS (App Router). Les pages sont statiques (générées avec generateStaticParams()) pour optimiser le SEO. Un mois après son lancement, le site génère une moyenne de 2 000 impressions / jour.",
+      en: "The app was developed with React Native to be used on Android tablets. Data is stored in a Firestore database, authentication is managed via Firebase, and Google Functions handle backend tasks.",
+      fr: "Application développée avec React Native pour être utilisée sur des tablettes Android. Les données sont stockées sur une base de donnée Firestore, l’authentification se fait via Firebase et des Google Functions.",
     },
     stack: [tech["reactNative"], tech["firebase"]],
   },
@@ -179,6 +203,7 @@ export const PROJECTS: Project[] = [
     name: "Edilians - boite à boutons",
     slug: "edilians",
     link: "/projects/edilians",
+    projectType: ProjectTypes.contract,
     featureImage: "/images/projects/edilians-feature.png",
     images: [
       "/images/projects/edilians-1.png",
@@ -190,12 +215,12 @@ export const PROJECTS: Project[] = [
       fr: "Application tablette pour Edilians.",
     },
     longDescription: {
-      en: "Adaptorz helps users check the compatibility of power outlets and electrical devices worldwide. The site allows users to specifically select the plugs for their devices and choose multiple destination countries at once. The tool then suggests travel adapters that perfectly match their needs.",
-      fr: "Adaptorz permet de vérifier la compatibilité des prises de courants et des appareils électriques dans le monde. Le site permet de sélectionner spécifiquement les prises de ses appareils, et de choisir plusieurs pays de destinations à la fois. L’outil suggère ensuite des adaptateurs de voyage qui correspondent exactement au besoin.",
+      en: "A tablet application designed to record and tack industrial waste identified on production lines. The app can be customized by selecting the most common defect types, button colors, and the number of buttons displayed. Operators can quickly log defects identified on their production line. The app includes a 'statistics' module that displays charts on daily waste statistics (by defect type, by wagon).",
+      fr: "Application tablette permettant l’enregistrement des rebus industriels identifiés sur les chaines de productions. L’app permet de personnaliser son écran de travail en choisissant les types de défauts les plus courants, la couleur et la quantité des boutons affichés. L’opérateur peut ensuite rapidement saisir les défauts identifiés sur sa ligne de production. L’app inclut un module ‘statistique’ affichant des graphiques sur les statistiques des rebus du jour (par type de défaut, par wagon).",
     },
     techDescription: {
-      en: "Multilingual site built with NextJS (App Router). The pages are static (generated with generateStaticParams()) to optimize SEO. One month after launch, the site averages 2,000 impressions per day.",
-      fr: "Site multilingue fait avec NextJS (App Router). Les pages sont statiques (générées avec generateStaticParams()) pour optimiser le SEO. Un mois après son lancement, le site génère une moyenne de 2 000 impressions / jour.",
+      en: "The app (frontend) was developed with React Native, using React Query to synchronize data with the database. In the absence of an internet connection, the app stores data locally and synchronizes it in batches when the connection becomes available again.",
+      fr: "L’app (frontend) a été développée avec React Native, et React Query pour synchroniser les données avec la base de données. En l’absence de connexion internet l’app stock les données en local, puis synchronise les données en batch lorsque la connexion est à nouveau disponible.",
     },
     stack: [tech["react"], tech["reactQuery"]],
   },
@@ -203,6 +228,7 @@ export const PROJECTS: Project[] = [
     name: "React hooks",
     slug: "react-hooks",
     link: "/projects/hooks",
+    projectType: ProjectTypes.hobby,
     featureImage: "/images/projects/hooks-feature.png",
     images: [
       "/images/projects/hooks-1.png",
@@ -212,16 +238,16 @@ export const PROJECTS: Project[] = [
       "/images/projects/hooks-5.png",
     ],
     description: {
-      en: "Small project to learn React hooks.",
-      fr: "Petit projet pour apprendre les hooks React.",
+      en: "Small learning project around React hooks.",
+      fr: "Petit projet autour des hooks de React.",
     },
     longDescription: {
-      en: "Adaptorz helps users check the compatibility of power outlets and electrical devices worldwide. The site allows users to specifically select the plugs for their devices and choose multiple destination countries at once. The tool then suggests travel adapters that perfectly match their needs.",
-      fr: "Adaptorz permet de vérifier la compatibilité des prises de courants et des appareils électriques dans le monde. Le site permet de sélectionner spécifiquement les prises de ses appareils, et de choisir plusieurs pays de destinations à la fois. L’outil suggère ensuite des adaptateurs de voyage qui correspondent exactement au besoin.",
+      en: "A website designed to learn about React hooks: useContext, useReducer, useRef, and custom hooks. Each example features an interactive mini-application with accompanying code snippets and explanations about how the hook works.",
+      fr: "Site pour renforcer l’apprentissage des ‘hooks’ de React: useContext, useReducer, useRef et custom hooks. Chaque exemple propose une mini application interactive accompagnée de code snippets, et des explications sur le fonctionnement du ‘hook’.",
     },
     techDescription: {
-      en: "Multilingual site built with NextJS (App Router). The pages are static (generated with generateStaticParams()) to optimize SEO. One month after launch, the site averages 2,000 impressions per day.",
-      fr: "Site multilingue fait avec NextJS (App Router). Les pages sont statiques (générées avec generateStaticParams()) pour optimiser le SEO. Un mois après son lancement, le site génère une moyenne de 2 000 impressions / jour.",
+      en: "The site was developed using Next.js (Page Router) and React.",
+      fr: "Site développé avec NextJS (Page Router) et React.",
     },
     stack: [tech["nextjs"], tech["react"]],
     externalLink: "https://react-fishing-rod.vercel.app/",

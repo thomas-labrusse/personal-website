@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Box, Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import ProjectCard from "@/app/ui/project/ProjectCard";
 import { PROJECTS } from "@/app/projects";
 
@@ -16,7 +16,18 @@ export default function Home() {
         width: "100%",
       }}
     >
-      <p>{t("title")}</p>
+      <Typography variant="h1" textAlign={"center"}>
+        {t("title")}
+      </Typography>
+      <Typography
+        variant="caption"
+        textAlign={"center"}
+        sx={{
+          marginBottom: "2rem",
+        }}
+      >
+        {t("greeting")}
+      </Typography>
       <Box
         sx={{
           display: "flex",

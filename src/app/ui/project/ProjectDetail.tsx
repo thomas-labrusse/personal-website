@@ -5,9 +5,8 @@ import { Locale } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import Carousel from "@/app/ui/carousel/Carousel";
 import Box from "@mui/material/Box";
-import { Button, Typography } from "@mui/material";
+import { Button, Chip, Typography } from "@mui/material";
 import StackList from "./StackList";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import BuildCircleOutlinedIcon from "@mui/icons-material/BuildCircleOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useRouter } from "next/navigation";
@@ -22,7 +21,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
   const router = useRouter();
   const {
     name,
-    description,
+    projectType,
     longDescription,
     techDescription,
     externalLink,
@@ -66,8 +65,23 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             borderRadius: "1rem",
           }}
         >
-          <Typography variant="h1">{name}</Typography>
-          <p>{description[locale]}</p>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: "1rem",
+            }}
+          >
+            <Typography variant="h1">{name}</Typography>
+            <Chip
+              label={projectType[locale]}
+              color="primary"
+              size="small"
+              variant={projectType.type === "hobby" ? "outlined" : "filled"}
+            />
+          </Box>
+          <p>{longDescription[locale]}</p>
           {externalLink && (
             <a
               target="_blank"
@@ -80,19 +94,6 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             </a>
           )}
           <StackList stack={stack} />
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-            backgroundColor: "white",
-            padding: "1rem",
-            borderRadius: "1rem",
-          }}
-        >
-          <InfoOutlinedIcon fontSize="large" color="primary" />
-          <Typography variant="body1">{longDescription[locale]}</Typography>
         </Box>
         <Box
           sx={{
