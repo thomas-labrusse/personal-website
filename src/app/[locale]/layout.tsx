@@ -11,7 +11,7 @@ import Footer from "@/app/ui/Footer";
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export const metadata: Metadata = {
@@ -23,9 +23,9 @@ export default async function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
-  setRequestLocale(params.locale);
-  const { locale } = params;
+  const { locale } = await params;
   const messages = await getMessages();
+  setRequestLocale(locale);
   return (
     <html lang="en">
       <body>
