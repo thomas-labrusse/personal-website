@@ -2,9 +2,11 @@ import { useTranslations } from "next-intl";
 import { Box, Container, Typography } from "@mui/material";
 import ProjectCard from "@/app/ui/project/ProjectCard";
 import { PROJECTS } from "@/app/projects";
+import { setRequestLocale } from "next-intl/server";
 
-export default function Home() {
+export default function Home({ params }: { params: { locale: string } }) {
   const t = useTranslations("Home");
+  setRequestLocale(params.locale);
   return (
     <Container
       sx={{

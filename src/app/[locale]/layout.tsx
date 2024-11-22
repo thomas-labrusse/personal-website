@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import React from "react";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import Header from "@/app/ui/Header";
 import { ThemeProvider } from "@mui/material/styles";
 import { myTheme } from "@/app/theme";
@@ -23,6 +23,7 @@ export default async function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
+  setRequestLocale(params.locale);
   const { locale } = params;
   const messages = await getMessages();
   return (
