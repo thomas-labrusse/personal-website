@@ -10,12 +10,12 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function Layout({
+export default function Layout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { project: string; locale: string };
 }) {
   setRequestLocale(params.locale);
   return <Container disableGutters>{children}</Container>;

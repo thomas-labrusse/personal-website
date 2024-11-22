@@ -1,11 +1,7 @@
 import { PROJECTS } from "@/app/projects";
 import ProjectDetail from "@/app/ui/project/ProjectDetail";
-// import { Button } from "@mui/material";
 import Container from "@mui/material/Container";
 import { setRequestLocale } from "next-intl/server";
-
-// import { useTranslations } from "next-intl";
-// import { useRouter } from "next/navigation";
 
 export const dynamicParams = true;
 
